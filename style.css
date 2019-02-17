@@ -9,6 +9,11 @@
     
 }
 
+:root{
+
+    --main-color: rgb(97, 7, 199);
+}
+
 .clearfix::after {
     content: "";
     display: table;
@@ -16,7 +21,7 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(back.jpg);
+    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(./pictures/back2.jpg);
     background-size: cover;
     background-position: center;
     font-family: Lato;
@@ -66,25 +71,25 @@ body {
     text-align: center;
     font-size: 80px;
     font-weight: 100;
-    color: #EB4D4D;
+    color: var(--main-color);
     margin-bottom: 130px;
 }
 
-.active { background-color: #f7f7f7; }
+.active { background-color: #0c000083; }
 .active .player-name { font-weight: 300; }
 
 .active .player-name::after {
     content: "\2022";
     font-size: 47px;
     position: absolute;
-    color: #EB4D4D;
+    color: var(--main-color);
     top: -7px;
     right: 10px;
     
 }
 
 .player-current-box {
-    background-color: #EB4D4D;
+    background-color: var(--main-color);
     color: #fff;
     width: 40%;
     margin: 0 auto;
@@ -127,7 +132,7 @@ button:focus {
 }
 
 i {
-    color: #EB4D4D;
+    color: var(--main-color);
     display: inline-block;
     margin-right: 15px;
     font-size: 32px;
@@ -142,6 +147,7 @@ i {
 .btn-hold { top: 467px;}
 
 .dice {
+    display: none;
     position: absolute;
     left: 50%;
     top: 178px;
@@ -151,4 +157,4 @@ i {
 }
 
 .winner { background-color: #f7f7f7; }
-.winner .player-name { font-weight: 300; color: #EB4D4D; }
+.winner .player-name { font-weight: 300; color: var(--main-color); }
