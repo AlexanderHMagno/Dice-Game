@@ -27,7 +27,7 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
     if (gameHasfinished == 0) {
         scores[activePlayer] += roundScore;
         document.getElementById('score-' + activePlayer).textContent = scores[activePlayer];
-        scores[activePlayer] >= 10 ? winner() : nextPlayer();
+        scores[activePlayer] >= 50 ? winner() : nextPlayer();
 
 
     }
