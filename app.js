@@ -46,6 +46,8 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
 
 document.querySelector('.btn-hold').addEventListener('click', function () {
     if (gameHasfinished == 0) {
+        
+
         scores[activePlayer] += roundScore;
         document.getElementById('score-' + activePlayer).textContent = scores[activePlayer];
         scores[activePlayer] >= maxScore ? winner() : nextPlayer();
@@ -98,4 +100,19 @@ function winner() {
     document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
     document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
 }
+
+
+
+//change color of the skin 
+
+document.querySelector('.color1').addEventListener('click',pintar);
+document.querySelector('.color2').addEventListener('click',pintar);
+document.querySelector('.color3').addEventListener('click',pintar);
+document.querySelector('.color4').addEventListener('click',pintar);
+document.querySelector('.color5').addEventListener('click',pintar);
+
+function pintar(){
+    document.documentElement.style.setProperty('--main-color', this.getAttribute('rel'));
+}
+
 

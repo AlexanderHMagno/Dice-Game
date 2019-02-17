@@ -182,3 +182,45 @@ input{top:520px;}
 
 .winner { background-color: #f7f7f7; }
 .winner .player-name { font-weight: 300; color: var(--main-color); }
+
+.setColors{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    height: 30px;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    position: fixed;
+    bottom: 29px;
+    z-index: 9999;
+    background: linear-gradient(white,#0c000083);
+    
+}
+
+.colors{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.color1{
+    background-color: rgb(163, 245, 41);
+}
+.color2{
+    background-color: rgb(44, 23, 240);
+}
+.color3{
+    background-color: rgb(223, 70, 9);
+}
+.color4{
+    background-color: rgb(231, 13, 148);
+}
+.color5{
+    background-color: rgb(97, 7, 199);
+}
+
+
+
