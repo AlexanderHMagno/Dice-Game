@@ -23,26 +23,31 @@ document.querySelector('.btn-roll').addEventListener('click',function(){
        document.getElementById('current-'+activePlayer).textContent = roundScore;
     }else{
         diceDOM.style.display = 'none';
-        roundScore = 0;
-        document.getElementById('current-'+activePlayer).textContent = '0';
-        document.querySelector('.player-'+activePlayer+'-panel').classList.toggle('active');
-        activePlayer===0?activePlayer=1:activePlayer=0;
-        document.querySelector('.player-'+activePlayer+'-panel').classList.toggle('active');
-    }
+        nextPlayer();
+        
+      }
 })
 
 
 
 document.querySelector('.btn-hold').addEventListener('click',function(){
 
-    scores[activePlayer]+=document.getElementById('current-'+activePlayer).val;
+    scores[activePlayer]+=roundScore;
     document.getElementById('score-'+activePlayer).textContent = scores[activePlayer];
+    nextPlayer();
+   
     
-    document.getElementById('current-'+activePlayer).textContent = 0;
+})
+
+
+function nextPlayer (){
+    roundScore = 0;
+    document.getElementById('current-'+activePlayer).textContent = '0';
+    document.querySelector('.player-'+activePlayer+'-panel').classList.toggle('active');
     activePlayer===0?activePlayer=1:activePlayer=0;
     document.querySelector('.player-'+activePlayer+'-panel').classList.toggle('active');
 
-})
+}
 
 
 
